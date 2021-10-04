@@ -3,6 +3,7 @@ package ru.digitalleague.hibertaxiservice.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.digitalleague.hibertaxiservice.persistance.entity.CityQueue;
 import ru.digitalleague.hibertaxiservice.persistance.repository.CityQueueRepository;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Service
 @Slf4j
+@Transactional
 public class CityQueueService {
     @Autowired
     private CityQueueRepository cityQueueRepository;
